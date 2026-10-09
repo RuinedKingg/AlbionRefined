@@ -70,37 +70,83 @@
 
                             <StackPanel>
                                 <TextBlock Text="Resource" Style="{StaticResource SmallLabel}"/>
-                                <ComboBox Style="{StaticResource InputBox}" SelectedIndex="2">
-                                    <ComboBoxItem>Hide</ComboBoxItem>
-                                    <ComboBoxItem>Ore</ComboBoxItem>
-                                    <ComboBoxItem>Fiber</ComboBoxItem>
-                                    <ComboBoxItem>Wood</ComboBoxItem>
-                                    <ComboBoxItem>Stone</ComboBoxItem>
-                                </ComboBox>
+                                <Border BorderBrush="#303832"
+                                        BorderThickness="1"
+                                        CornerRadius="4"
+                                        Background="#121714"
+                                        Padding="1">
+
+                                    <UniformGrid Columns="2">
+                                        <RadioButton Content="Кожа"
+                                                     Style="{StaticResource TierButton}"/>
+
+                                        <RadioButton Content="Ткань"
+                                                     Style="{StaticResource TierButton}"
+                                                     IsChecked="True"/>
+                                    </UniformGrid>
+                                </Border>
                             </StackPanel>
 
                             <StackPanel Grid.Column="2">
                                 <TextBlock Text="Tier" Style="{StaticResource SmallLabel}"/>
-                                <ComboBox Style="{StaticResource InputBox}" SelectedIndex="2">
-                                    <ComboBoxItem>T2</ComboBoxItem>
-                                    <ComboBoxItem>T3</ComboBoxItem>
-                                    <ComboBoxItem>T4</ComboBoxItem>
-                                    <ComboBoxItem>T5</ComboBoxItem>
-                                    <ComboBoxItem>T6</ComboBoxItem>
-                                    <ComboBoxItem>T7</ComboBoxItem>
-                                    <ComboBoxItem>T8</ComboBoxItem>
-                                </ComboBox>
+                                <Border BorderBrush="#303832"
+                                        BorderThickness="1"
+                                        CornerRadius="4"
+                                        Background="#121714"
+                                        Padding="1">
+
+                                    <UniformGrid Columns="7">
+                                        <RadioButton Content="T2"
+                                                     Style="{StaticResource TierButton}"/>
+                                        
+                                        <RadioButton Content="T3"
+                                                     Style="{StaticResource TierButton}"/>
+                                        
+                                        <RadioButton Content="T4"
+                                                     Style="{StaticResource TierButton}"/>
+
+                                        <RadioButton Content="T5"
+                                                     Style="{StaticResource TierButton}"/>
+
+                                        <RadioButton Content="T6"
+                                                     Style="{StaticResource TierButton}"
+                                                     IsChecked="True"/>
+
+                                        <RadioButton Content="T7"
+                                                     Style="{StaticResource TierButton}"/>
+
+                                        <RadioButton Content="T8"
+                                                     Style="{StaticResource TierButton}"/>
+                                    </UniformGrid>
+                                </Border>
                             </StackPanel>
 
                             <StackPanel Grid.Column="4">
                                 <TextBlock Text="Enchantment" Style="{StaticResource SmallLabel}"/>
-                                <ComboBox Style="{StaticResource InputBox}" SelectedIndex="0">
-                                    <ComboBoxItem>Normal</ComboBoxItem>
-                                    <ComboBoxItem>.1</ComboBoxItem>
-                                    <ComboBoxItem>.2</ComboBoxItem>
-                                    <ComboBoxItem>.3</ComboBoxItem>
-                                    <ComboBoxItem>.4</ComboBoxItem>
-                                </ComboBox>
+                                <Border BorderBrush="#303832"
+                                        BorderThickness="1"
+                                        CornerRadius="4"
+                                        Background="#121714"
+                                        Padding="1">
+
+                                    <UniformGrid Columns="5">
+                                        <RadioButton Content=".0"
+                                                     Style="{StaticResource TierButton}"/>
+
+                                        <RadioButton Content=".1"
+                                                     Style="{StaticResource TierButton}"/>
+
+                                        <RadioButton Content=".2"
+                                                     Style="{StaticResource TierButton}"
+                                                     IsChecked="True"/>
+
+                                        <RadioButton Content=".3"
+                                                     Style="{StaticResource TierButton}"/>
+
+                                        <RadioButton Content=".4"
+                                                     Style="{StaticResource TierButton}"/>
+                                    </UniformGrid>
+                                </Border>
                             </StackPanel>
                         </Grid>
 
