@@ -1,0 +1,89 @@
+﻿<Window x:Class="AlbionRefined.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Albion Refine"
+        Width="1280"
+        Height="760"
+        MinWidth="1050"
+        MinHeight="650"
+        Background="{StaticResource WindowBrush}"
+        Foreground="{StaticResource TextBrush}"
+        FontFamily="Segoe UI"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Sidebar -->
+        <Border Grid.Column="0"
+                Background="{StaticResource SidebarBrush}"
+                BorderBrush="#242A26"
+                BorderThickness="0,0,1,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="62"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="105"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Margin="22,18,18,0">
+                    <TextBlock Text="Albion Refine"
+                               FontSize="13"
+                               FontWeight="SemiBold"
+                               Foreground="{StaticResource TextBrush}"/>
+                    <TextBlock Text="RESOURCE CALCULATOR"
+                               Margin="0,3,0,0"
+                               FontSize="7"
+                               Foreground="{StaticResource DimTextBrush}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Margin="15,18,15,0">
+                    <Button x:Name="CalculatorButton"
+                            Style="{StaticResource NavButton}"
+                            Content="▣   Calculator"
+                            Click="Calculator_Click"/>
+
+                    <Button x:Name="HistoryButton"
+                            Style="{StaticResource NavButton}"
+                            Content="◷   History"
+                            Click="History_Click"/>
+
+                    <Button x:Name="SavedSettingsButton"
+                            Style="{StaticResource NavButton}"
+                            Content="▤   Saved Settings"
+                            Click="SavedSettings_Click"/>
+
+                    <Button x:Name="MarketPricesButton"
+                            Style="{StaticResource NavButton}"
+                            Content="▥   Market Prices"
+                            Click="MarketPrices_Click"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Margin="22,0,22,20">
+                    <Border Style="{StaticResource Card}" Padding="9" Margin="0,0,0,10">
+                        <StackPanel>
+                            <TextBlock Text="DATA SYNC"
+                                       FontSize="7"
+                                       Foreground="{StaticResource DimTextBrush}"/>
+                            <TextBlock Text="Last update: 2 min ago"
+                                       FontSize="8"
+                                       Margin="0,3,0,0"
+                                       Foreground="{StaticResource MutedTextBrush}"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Button Style="{StaticResource NavButton}"
+                            Content="⚙   Settings"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Content -->
+        <Border Grid.Column="1" Background="{StaticResource WindowBrush}">
+            <ContentControl x:Name="MainContent"/>
+        </Border>
+    </Grid>
+</Window>
