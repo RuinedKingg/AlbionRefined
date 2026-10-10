@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AlbionRefined")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67cb8803f7bdedaf22728ce5b70ae4317d6ec5fb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a50bc996de4cd04142b9643f4d354553e756d1c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("AlbionRefined")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AlbionRefined")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

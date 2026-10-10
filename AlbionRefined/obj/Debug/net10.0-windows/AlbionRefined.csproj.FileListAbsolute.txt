@@ -28,3 +28,4 @@ D:\Kirill\Shit\Projects\AlbionRefined\AlbionRefined\obj\Debug\net10.0-windows\Vi
 D:\Kirill\Shit\Projects\AlbionRefined\AlbionRefined\obj\Debug\net10.0-windows\Views\SavedSettingsView.g.cs
 D:\Kirill\Shit\Projects\AlbionRefined\AlbionRefined\obj\Debug\net10.0-windows\AlbionRefined_MarkupCompile.lref
 D:\Kirill\Shit\Projects\AlbionRefined\AlbionRefined\obj\Debug\net10.0-windows\App.baml
+D:\Kirill\Shit\Projects\AlbionRefined\AlbionRefined\obj\Debug\net10.0-windows\AlbionRefined.sourcelink.json
