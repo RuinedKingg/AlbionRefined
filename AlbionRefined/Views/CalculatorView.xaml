@@ -57,6 +57,8 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="10"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition />
+                            <RowDefinition />
                         </Grid.RowDefinitions>
 
                         <Grid Grid.Row="0">
@@ -103,14 +105,14 @@
                                                      Style="{StaticResource TierButton}"/>
                                         
                                         <RadioButton Content="T4"
-                                                     Style="{StaticResource TierButton}"/>
+                                                     Style="{StaticResource TierButton}"
+                                                     IsChecked="True"/>
 
                                         <RadioButton Content="T5"
                                                      Style="{StaticResource TierButton}"/>
 
                                         <RadioButton Content="T6"
-                                                     Style="{StaticResource TierButton}"
-                                                     IsChecked="True"/>
+                                                     Style="{StaticResource TierButton}"/>
 
                                         <RadioButton Content="T7"
                                                      Style="{StaticResource TierButton}"/>
@@ -131,14 +133,14 @@
 
                                     <UniformGrid Columns="5">
                                         <RadioButton Content=".0"
-                                                     Style="{StaticResource TierButton}"/>
+                                                     Style="{StaticResource TierButton}"
+                                                     IsChecked="True"/>
 
                                         <RadioButton Content=".1"
                                                      Style="{StaticResource TierButton}"/>
 
                                         <RadioButton Content=".2"
-                                                     Style="{StaticResource TierButton}"
-                                                     IsChecked="True"/>
+                                                     Style="{StaticResource TierButton}"/>
 
                                         <RadioButton Content=".3"
                                                      Style="{StaticResource TierButton}"/>
@@ -161,28 +163,35 @@
 
                             <StackPanel>
                                 <TextBlock Text="Quantity" Style="{StaticResource SmallLabel}"/>
-                                <TextBox Text="100"/>
+                                <TextBox Name="StackSize" Text="100"/>
                             </StackPanel>
 
                             <StackPanel Grid.Column="2">
-                                <TextBlock Text="City" Style="{StaticResource SmallLabel}"/>
-                                <ComboBox Style="{StaticResource InputBox}" SelectedIndex="0">
-                                    <ComboBoxItem>Bridgewatch</ComboBoxItem>
-                                    <ComboBoxItem>Caerleon</ComboBoxItem>
-                                    <ComboBoxItem>Fort Sterling</ComboBoxItem>
-                                    <ComboBoxItem>Lymhurst</ComboBoxItem>
-                                    <ComboBoxItem>Martlock</ComboBoxItem>
-                                    <ComboBoxItem>Thetford</ComboBoxItem>
-                                </ComboBox>
-                            </StackPanel>
-
-                            <StackPanel Grid.Column="4">
                                 <TextBlock Text="Return rate" Style="{StaticResource SmallLabel}"/>
-                                <TextBox Text="36.7%"/>
+                                <TextBox Name="ReturnRate" Text="36.7%" LostFocus="PercentTextBox_LostFocus"/>
                             </StackPanel>
                         </Grid>
 
                         <Grid Grid.Row="4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel>
+                                <TextBlock Text="Usage fee" Style="{StaticResource SmallLabel}"/>
+                                <TextBox Text="350"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2">
+                                <TextBlock Text="Market tax" Style="{StaticResource SmallLabel}"/>
+                                <TextBox Text="4.0%" Name="MarketTax" LostFocus="PercentTextBox_LostFocus"/>
+                            </StackPanel>
+                        </Grid>
+                        
+                        <Grid Grid.Row="6">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="10"/>
@@ -199,25 +208,15 @@
                                 <TextBlock Text="Focus per craft" Style="{StaticResource SmallLabel}"/>
                                 <TextBox Text="30"/>
                             </StackPanel>
-                            <StackPanel Grid.Column="4">
-                                <TextBlock Text="Market tax" Style="{StaticResource SmallLabel}"/>
-                                <TextBox Text="4.0%"/>
-                            </StackPanel>
                         </Grid>
 
-                        <DockPanel Grid.Row="6">
-                            <StackPanel Orientation="Horizontal">
-                                <CheckBox IsChecked="True" VerticalAlignment="Center"/>
-                                <TextBlock Text="Include station fee"
-                                           Margin="6,0,0,0"
-                                           VerticalAlignment="Center"
-                                           Style="{StaticResource SmallLabel}"/>
-                            </StackPanel>
+                        <DockPanel Grid.Row="8">
 
                             <Button DockPanel.Dock="Right"
                                     Content="Calculate"
                                     Style="{StaticResource PrimaryButton}"
-                                    Width="105"/>
+                                    Width="105"
+                                    Click="On_Calculate"/>
                         </DockPanel>
                     </Grid>
                 </Grid>
