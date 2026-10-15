@@ -99,25 +99,32 @@
 
                                     <UniformGrid Columns="7">
                                         <RadioButton Content="T2"
-                                                     Style="{StaticResource TierButton}"/>
+                                                     Style="{StaticResource TierButton}"
+                                                     Checked="TierChecked"
+                                                     Name="Tier2RadioButton"/>
                                         
                                         <RadioButton Content="T3"
+                                                     Checked="TierChecked"
                                                      Style="{StaticResource TierButton}"/>
                                         
                                         <RadioButton Content="T4"
-                                                     Style="{StaticResource TierButton}"
-                                                     IsChecked="True"/>
+                                                     Checked="TierChecked"
+                                                     Style="{StaticResource TierButton}"/>
 
                                         <RadioButton Content="T5"
+                                                     Checked="TierChecked"
                                                      Style="{StaticResource TierButton}"/>
 
                                         <RadioButton Content="T6"
+                                                     Checked="TierChecked"
                                                      Style="{StaticResource TierButton}"/>
 
                                         <RadioButton Content="T7"
+                                                     Checked="TierChecked"
                                                      Style="{StaticResource TierButton}"/>
 
                                         <RadioButton Content="T8"
+                                                     Checked="TierChecked"
                                                      Style="{StaticResource TierButton}"/>
                                     </UniformGrid>
                                 </Border>
@@ -183,7 +190,7 @@
 
                             <StackPanel>
                                 <TextBlock Text="Usage fee" Style="{StaticResource SmallLabel}"/>
-                                <TextBox Text="350"/>
+                                <TextBox Name="UsageFee" Text="350"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2">
                                 <TextBlock Text="Market tax" Style="{StaticResource SmallLabel}"/>
@@ -293,17 +300,21 @@
                             VerticalAlignment="Center"/>
                 </DockPanel>
 
-                <DataGrid Grid.Row="1" Style="{StaticResource DataGridBase}">
+                <DataGrid Grid.Row="1" Style="{StaticResource DataGridBase}"
+                          x:Name="ResourcesTable">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="RESOURCE" Binding="{Binding Name}" Width="2*"/>
-                        <DataGridTextColumn Header="TIER" Binding="{Binding Tier}" Width="70"/>
-                        <DataGridTextColumn Header="ENCHANTMENT" Binding="{Binding Enchant}" Width="100"/>
-                        <DataGridTextColumn Header="REQUIRED" Binding="{Binding Required}" Width="100"/>
-                        <DataGridTextColumn Header="PRICE" Binding="{Binding Price}" Width="100"/>
-                        <DataGridTextColumn Header="TOTAL" Binding="{Binding Total}" Width="120"/>
+                        <DataGridTextColumn Header="Tier" Binding="{Binding Tier}" IsReadOnly="True" Width="30"/>
+                        <DataGridTextColumn Header="Resource" Binding="{Binding Resource}" IsReadOnly="True" Width="45"/>
+                        <DataGridTextColumn Header="Raw Price" Binding="{Binding RawPrice}" IsReadOnly="False" Width="70"/>
+                        <DataGridTextColumn Header="Product" Binding="{Binding Product}" IsReadOnly="True" Width="45"/>
+                        <DataGridTextColumn Header="Sell Price" Binding="{Binding SellPrice}" IsReadOnly="False" Width="70"/>
+                        <DataGridTextColumn Header="Profit" Binding="{Binding Profit}" IsReadOnly="True" Width="120"/>
+                        <DataGridTextColumn Header="ROI" Binding="{Binding Roi}" IsReadOnly="True" Width="120"/>
+                        <DataGridTextColumn Header="Resource Cost" Binding="{Binding ResourceCost}" IsReadOnly="True" Width="120"/>
+                        <DataGridTextColumn Header="Usage Fee" Binding="{Binding UsageFee}" IsReadOnly="True" Width="120"/>
+                        <DataGridTextColumn Header="Market Tax" Binding="{Binding MarketTax}" IsReadOnly="True" Width="120"/>
                     </DataGrid.Columns>
-                </DataGrid>
-            </Grid>
+                </DataGrid></Grid>
         </Border>
     </Grid>
 </UserControl>
