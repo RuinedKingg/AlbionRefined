@@ -218,12 +218,16 @@
                         </Grid>
 
                         <DockPanel Grid.Row="8">
-
-                            <Button DockPanel.Dock="Right"
+                            <Button DockPanel.Dock="Bottom"
                                     Content="Calculate"
                                     Style="{StaticResource PrimaryButton}"
                                     Width="105"
                                     Click="On_Calculate"/>
+                            
+                            <CheckBox DockPanel.Dock="Bottom"
+                                      Name="UseFocusCheckBox" 
+                                      Content="Использовать фокус?" 
+                                      Style="{StaticResource CheckBoxStyle}"/>
                         </DockPanel>
                     </Grid>
                 </Grid>

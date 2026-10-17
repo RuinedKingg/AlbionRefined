@@ -17,6 +17,7 @@
     <SolidColorBrush x:Key="AccentDarkBrush" Color="#657226"/>
     <SolidColorBrush x:Key="SuccessBrush" Color="#9DB637"/>
     <SolidColorBrush x:Key="WarningBrush" Color="#B28A3A"/>
+    <SolidColorBrush x:Key="CheckBoxBackground" Color="#151B17"/>
 
     <Style x:Key="PageTitle" TargetType="TextBlock">
         <Setter Property="FontSize" Value="18"/>
@@ -39,6 +40,13 @@
     <Style x:Key="SmallLabel" TargetType="TextBlock">
         <Setter Property="FontSize" Value="9"/>
         <Setter Property="Foreground" Value="{StaticResource MutedTextBrush}"/>
+    </Style>
+
+    <Style x:Key="CheckBoxStyle" TargetType="CheckBox">
+        <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+        <Setter Property="Background" Value="{StaticResource CheckBoxBackground}"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
 
     <Style x:Key="NavButton" TargetType="Button">
