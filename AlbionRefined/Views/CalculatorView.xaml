@@ -3,322 +3,596 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              Background="{StaticResource WindowBrush}">
 
-    <Grid Margin="28,24,28,24">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="14"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="14"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0">
-            <TextBlock Text="Refining calculator" Style="{StaticResource PageTitle}"/>
-            <TextBlock Text="Calculate focus cost, resources and expected profit"
-                       Style="{StaticResource PageSubtitle}"/>
-        </StackPanel>
+    <Border CornerRadius="8">
+        <Border.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#171b18" Offset="0" />
+                <GradientStop Color="#171b18" Offset="0.5" />
+                <GradientStop Color="#171b18" Offset="1" />
+            </RadialGradientBrush>
+        </Border.Background>
 
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="14"/>
-                <ColumnDefinition Width="310"/>
-            </Grid.ColumnDefinitions>
 
-            <!-- Processing setup -->
-            <Border Grid.Column="0" Style="{StaticResource Card}">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="14"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
+        <Grid Margin="28,24,28,24">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="14" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="14" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-                    <DockPanel>
-                        <StackPanel>
-                            <TextBlock Text="PROCESSING SETUP" Style="{StaticResource SectionTitle}"/>
-                            <TextBlock Text="Configure the resource you want to refine"
-                                       Style="{StaticResource SmallLabel}"
-                                       Margin="0,3,0,0"/>
-                        </StackPanel>
-                        <TextBlock DockPanel.Dock="Right"
-                                   Text="Use focus"
-                                   VerticalAlignment="Center"
-                                   Foreground="{StaticResource MutedTextBrush}"
-                                   FontSize="8"/>
-                    </DockPanel>
+            <StackPanel Grid.Row="0">
+                <TextBlock Text="Resource processing" Style="{StaticResource PageTitle}" />
+                <TextBlock Text="Estimate refining costs, returns and market profit."
+                           Style="{StaticResource PageSubtitle}" />
+            </StackPanel>
 
-                    <Grid Grid.Row="2">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="10"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="10"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="10"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition />
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="14" />
+                    <ColumnDefinition Width="310" />
+                </Grid.ColumnDefinitions>
 
-                        <Grid Grid.Row="0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-
-                            <StackPanel>
-                                <TextBlock Text="Resource" Style="{StaticResource SmallLabel}"/>
-                                <Border BorderBrush="#303832"
-                                        BorderThickness="1"
-                                        CornerRadius="4"
-                                        Background="#121714"
-                                        Padding="1">
-
-                                    <UniformGrid Columns="2">
-                                        <RadioButton Content="Кожа"
-                                                     Style="{StaticResource TierButton}"/>
-
-                                        <RadioButton Content="Ткань"
-                                                     Style="{StaticResource TierButton}"
-                                                     IsChecked="True"/>
-                                    </UniformGrid>
-                                </Border>
-                            </StackPanel>
-
-                            <StackPanel Grid.Column="2">
-                                <TextBlock Text="Tier" Style="{StaticResource SmallLabel}"/>
-                                <Border BorderBrush="#303832"
-                                        BorderThickness="1"
-                                        CornerRadius="4"
-                                        Background="#121714"
-                                        Padding="1">
-
-                                    <UniformGrid Columns="7">
-                                        <RadioButton Content="T2"
-                                                     Style="{StaticResource TierButton}"
-                                                     Checked="TierChecked"
-                                                     Name="Tier2RadioButton"/>
-                                        
-                                        <RadioButton Content="T3"
-                                                     Checked="TierChecked"
-                                                     Style="{StaticResource TierButton}"/>
-                                        
-                                        <RadioButton Content="T4"
-                                                     Checked="TierChecked"
-                                                     Style="{StaticResource TierButton}"/>
-
-                                        <RadioButton Content="T5"
-                                                     Checked="TierChecked"
-                                                     Style="{StaticResource TierButton}"/>
-
-                                        <RadioButton Content="T6"
-                                                     Checked="TierChecked"
-                                                     Style="{StaticResource TierButton}"/>
-
-                                        <RadioButton Content="T7"
-                                                     Checked="TierChecked"
-                                                     Style="{StaticResource TierButton}"/>
-
-                                        <RadioButton Content="T8"
-                                                     Checked="TierChecked"
-                                                     Style="{StaticResource TierButton}"/>
-                                    </UniformGrid>
-                                </Border>
-                            </StackPanel>
-
-                            <StackPanel Grid.Column="4">
-                                <TextBlock Text="Enchantment" Style="{StaticResource SmallLabel}"/>
-                                <Border BorderBrush="#303832"
-                                        BorderThickness="1"
-                                        CornerRadius="4"
-                                        Background="#121714"
-                                        Padding="1">
-
-                                    <UniformGrid Columns="5">
-                                        <RadioButton Content=".0"
-                                                     Style="{StaticResource TierButton}"
-                                                     IsChecked="True"/>
-
-                                        <RadioButton Content=".1"
-                                                     Style="{StaticResource TierButton}"/>
-
-                                        <RadioButton Content=".2"
-                                                     Style="{StaticResource TierButton}"/>
-
-                                        <RadioButton Content=".3"
-                                                     Style="{StaticResource TierButton}"/>
-
-                                        <RadioButton Content=".4"
-                                                     Style="{StaticResource TierButton}"/>
-                                    </UniformGrid>
-                                </Border>
-                            </StackPanel>
-                        </Grid>
-
-                        <Grid Grid.Row="2">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-
-                            <StackPanel>
-                                <TextBlock Text="Quantity" Style="{StaticResource SmallLabel}"/>
-                                <TextBox Name="StackSize" Text="100"/>
-                            </StackPanel>
-
-                            <StackPanel Grid.Column="2">
-                                <TextBlock Text="Return rate" Style="{StaticResource SmallLabel}"/>
-                                <TextBox Name="ReturnRate" Text="36.7%" LostFocus="PercentTextBox_LostFocus"/>
-                            </StackPanel>
-                        </Grid>
-
-                        <Grid Grid.Row="4">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-
-                            <StackPanel>
-                                <TextBlock Text="Usage fee" Style="{StaticResource SmallLabel}"/>
-                                <TextBox Name="UsageFee" Text="350"/>
-                            </StackPanel>
-                            <StackPanel Grid.Column="2">
-                                <TextBlock Text="Market tax" Style="{StaticResource SmallLabel}"/>
-                                <TextBox Text="4.0%" Name="MarketTax" LostFocus="PercentTextBox_LostFocus"/>
-                            </StackPanel>
-                        </Grid>
-                        
-                        <Grid Grid.Row="6">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-
-                            <StackPanel>
-                                <TextBlock Text="Focus available" Style="{StaticResource SmallLabel}"/>
-                                <TextBox Text="30,000"/>
-                            </StackPanel>
-                            <StackPanel Grid.Column="2">
-                                <TextBlock Text="Focus per craft" Style="{StaticResource SmallLabel}"/>
-                                <TextBox Text="30"/>
-                            </StackPanel>
-                        </Grid>
-
-                        <DockPanel Grid.Row="8">
-                            <Button DockPanel.Dock="Bottom"
-                                    Content="Calculate"
-                                    Style="{StaticResource PrimaryButton}"
-                                    Width="105"
-                                    Click="On_Calculate"/>
-                            
-                            <CheckBox DockPanel.Dock="Bottom"
-                                      Name="UseFocusCheckBox" 
-                                      Content="Использовать фокус?" 
-                                      Style="{StaticResource CheckBoxStyle}"/>
-                        </DockPanel>
-                    </Grid>
-                </Grid>
-            </Border>
-
-            <!-- Profit summary -->
-            <Border Grid.Column="2"
-                    Style="{StaticResource Card}"
-                    BorderBrush="#55632C">
-                <StackPanel>
-                    <TextBlock Text="PROFIT SUMMARY" Style="{StaticResource SectionTitle}"/>
-                    <TextBlock Text="+88,780"
-                               FontSize="25"
-                               FontWeight="SemiBold"
-                               Foreground="{StaticResource SuccessBrush}"
-                               Margin="0,12,0,2"/>
-                    <TextBlock Text="Estimated profit"
-                               Style="{StaticResource SmallLabel}"/>
-
-                    <Separator Margin="0,14" Background="{StaticResource BorderBrush}"/>
-
+                <!-- Processing setup -->
+                <Border Grid.Column="0" Style="{StaticResource Card}">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="25"/>
-                            <RowDefinition Height="25"/>
-                            <RowDefinition Height="25"/>
-                            <RowDefinition Height="25"/>
-                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="14" />
+                            <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
 
-                        <TextBlock Grid.Row="0" Text="Input cost" Style="{StaticResource SmallLabel}"/>
-                        <TextBlock Grid.Row="0" Text="120,000" HorizontalAlignment="Right" Foreground="{StaticResource TextBrush}" FontSize="9"/>
+                        <DockPanel>
+                            <StackPanel>
+                                <Grid Margin="0,0,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="42"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
 
-                        <TextBlock Grid.Row="1" Text="Output value" Style="{StaticResource SmallLabel}"/>
-                        <TextBlock Grid.Row="1" Text="218,780" HorizontalAlignment="Right" Foreground="{StaticResource TextBrush}" FontSize="9"/>
+                                    <!-- Decorative diamond -->
+                                    <Grid Grid.Column="0"
+                                          Width="36"
+                                          Height="36"
+                                          VerticalAlignment="Center">
 
-                        <TextBlock Grid.Row="2" Text="Station fee" Style="{StaticResource SmallLabel}"/>
-                        <TextBlock Grid.Row="2" Text="4,000" HorizontalAlignment="Right" Foreground="{StaticResource TextBrush}" FontSize="9"/>
+                                        <Border Width="25"
+                                                Height="25"
+                                                BorderBrush="#8B7139"
+                                                BorderThickness="1"
+                                                RenderTransformOrigin="0.5,0.5">
+                                            <Border.RenderTransform>
+                                                <RotateTransform Angle="45"/>
+                                            </Border.RenderTransform>
+                                        </Border>
 
-                        <TextBlock Grid.Row="3" Text="Market tax" Style="{StaticResource SmallLabel}"/>
-                        <TextBlock Grid.Row="3" Text="26,000" HorizontalAlignment="Right" Foreground="{StaticResource TextBrush}" FontSize="9"/>
+                                        <TextBlock Text="1"
+                                                   Foreground="#D1AD5B"
+                                                   FontSize="12"
+                                                   HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"/>
+                                    </Grid>
 
-                        <TextBlock Grid.Row="4" Text="Focus efficiency" Style="{StaticResource SmallLabel}"/>
-                        <TextBlock Grid.Row="4" Text="5,926 / 1k" HorizontalAlignment="Right" Foreground="{StaticResource SuccessBrush}" FontSize="9"/>
+                                    <TextBlock Grid.Column="1"
+                                               Text="Processing setup" Style="{StaticResource SectionTitle}"
+                                               VerticalAlignment="Center"
+                                               Margin="10,0,10,0"/>
+
+                                    <!-- Status -->
+                                    <StackPanel Grid.Column="2"
+                                                Orientation="Horizontal"
+                                                VerticalAlignment="Center">
+                                    </StackPanel>
+                                </Grid>
+                            </StackPanel>
+                        </DockPanel>
+
+                        <Grid Grid.Row="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel>
+                                    <TextBlock Text="Resource" Style="{StaticResource SmallLabel}" />
+                                    <Border BorderBrush="#303832"
+                                            BorderThickness="1"
+                                            CornerRadius="4"
+                                            Background="#121714"
+                                            Padding="1">
+
+                                        <UniformGrid Columns="2">
+                                            <RadioButton Content="Leather"
+                                                         Style="{StaticResource TierButton}" />
+
+                                            <RadioButton Content="Ткань"
+                                                         Style="{StaticResource TierButton}"
+                                                         IsChecked="True" />
+                                        </UniformGrid>
+                                    </Border>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="2">
+                                    <TextBlock Text="Tier" Style="{StaticResource SmallLabel}" />
+                                    <Border BorderBrush="#303832"
+                                            BorderThickness="1"
+                                            CornerRadius="4"
+                                            Background="#121714"
+                                            Padding="1">
+
+                                        <UniformGrid Columns="7">
+                                            <RadioButton Content="T2"
+                                                         Style="{StaticResource TierButton}"
+                                                         Checked="TierChecked"
+                                                         Name="Tier2RadioButton" />
+
+                                            <RadioButton Content="T3"
+                                                         Checked="TierChecked"
+                                                         Style="{StaticResource TierButton}" />
+
+                                            <RadioButton Content="T4"
+                                                         Checked="TierChecked"
+                                                         Style="{StaticResource TierButton}" />
+
+                                            <RadioButton Content="T5"
+                                                         Checked="TierChecked"
+                                                         Style="{StaticResource TierButton}" />
+
+                                            <RadioButton Content="T6"
+                                                         Checked="TierChecked"
+                                                         Style="{StaticResource TierButton}" />
+
+                                            <RadioButton Content="T7"
+                                                         Checked="TierChecked"
+                                                         Style="{StaticResource TierButton}" />
+
+                                            <RadioButton Content="T8"
+                                                         Checked="TierChecked"
+                                                         Style="{StaticResource TierButton}" />
+                                        </UniformGrid>
+                                    </Border>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="4">
+                                    <TextBlock Text="Enchantment" Style="{StaticResource SmallLabel}" />
+                                    <Border BorderBrush="#303832"
+                                            BorderThickness="1"
+                                            CornerRadius="4"
+                                            Background="#121714"
+                                            Padding="1">
+
+                                        <UniformGrid Columns="5">
+                                            <RadioButton Content=".0"
+                                                         Style="{StaticResource TierButton}"
+                                                         IsChecked="True" />
+
+                                            <RadioButton Content=".1"
+                                                         Style="{StaticResource TierButton}" />
+
+                                            <RadioButton Content=".2"
+                                                         Style="{StaticResource TierButton}" />
+
+                                            <RadioButton Content=".3"
+                                                         Style="{StaticResource TierButton}" />
+
+                                            <RadioButton Content=".4"
+                                                         Style="{StaticResource TierButton}" />
+                                        </UniformGrid>
+                                    </Border>
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel>
+                                    <TextBlock Text="Quantity" Style="{StaticResource SmallLabel}" />
+                                    <TextBox Name="StackSize" Text="100" />
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="2">
+                                    <TextBlock Text="Return rate" Style="{StaticResource SmallLabel}" />
+                                    <TextBox Name="ReturnRate" Text="36.7%" LostFocus="PercentTextBox_LostFocus" />
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid Grid.Row="4">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel>
+                                    <TextBlock Text="Usage fee" Style="{StaticResource SmallLabel}" />
+                                    <TextBox Name="UsageFee" Text="350" />
+                                </StackPanel>
+                                <StackPanel Grid.Column="2">
+                                    <TextBlock Text="Market tax" Style="{StaticResource SmallLabel}" />
+                                    <TextBox Text="4.0%" Name="MarketTax" LostFocus="PercentTextBox_LostFocus" />
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid Grid.Row="6">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel>
+                                    <TextBlock Text="Focus available" Style="{StaticResource SmallLabel}" />
+                                    <TextBox Text="30,000" />
+                                </StackPanel>
+                                <StackPanel Grid.Column="2">
+                                    <TextBlock Text="Focus per craft" Style="{StaticResource SmallLabel}" />
+                                    <TextBox Text="30" />
+                                </StackPanel>
+                            </Grid>
+
+                            <DockPanel Grid.Row="8">
+                                <Button DockPanel.Dock="Bottom"
+                                        Content="Calculate"
+                                        Style="{StaticResource PrimaryButton}"
+                                        Width="105"
+                                        Click="On_Calculate" />
+
+                                <CheckBox DockPanel.Dock="Bottom"
+                                          Name="UseFocusCheckBox"
+                                          Content="Focus use"
+                                          Style="{StaticResource CheckBoxStyle}" />
+                            </DockPanel>
+                        </Grid>
+                    </Grid>
+                </Border>
+
+                <!-- Profit summary окно справа -->
+                <Border Grid.Column="2"
+                Padding="15"
+                CornerRadius="1"
+                BorderThickness="1"
+                BorderBrush="#303831"
+                Background="#191F1B"
+                MaxWidth="300"
+                HorizontalAlignment="Stretch">
+
+            <StackPanel>
+
+                <!-- 1. HEADER -->
+                <Grid Margin="0,0,0,24">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="42"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Decorative diamond -->
+                    <Grid Grid.Column="0"
+                          Width="36"
+                          Height="36"
+                          VerticalAlignment="Center">
+
+                        <Border Width="25"
+                                Height="25"
+                                BorderBrush="#8B7139"
+                                BorderThickness="1"
+                                RenderTransformOrigin="0.5,0.5">
+                            <Border.RenderTransform>
+                                <RotateTransform Angle="45"/>
+                            </Border.RenderTransform>
+                        </Border>
+
+                        <TextBlock Text="2"
+                                   Foreground="#D1AD5B"
+                                   FontSize="12"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
                     </Grid>
 
-                    <Button Content="Save this calculation"
-                            Style="{StaticResource PrimaryButton}"
-                            Margin="0,15,0,0"/>
-                </StackPanel>
-            </Border>
-        </Grid>
+                    <TextBlock Grid.Column="1"
+                               Text="Profit summary" Style="{StaticResource SectionTitle}"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
 
-        <!-- Resource composition -->
-        <Border Grid.Row="4" Style="{StaticResource Card}" Padding="0">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="48"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+                    <!-- Status -->
+                    <StackPanel Grid.Column="2"
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center">
+                    </StackPanel>
+                </Grid>
 
-                <DockPanel Margin="14,0">
-                    <StackPanel VerticalAlignment="Center">
-                        <TextBlock Text="RESOURCE COMPOSITION" Style="{StaticResource SectionTitle}"/>
-                        <TextBlock Text="Materials required for this calculation"
-                                   Style="{StaticResource SmallLabel}"
-                                   Margin="0,2,0,0"/>
+
+                <!-- 2. PROFIT CARD -->
+                <Border BorderThickness="1"
+                        BorderBrush="#404333"
+                        Padding="1"
+                        Margin="0,0,0,10">
+
+                    <Border.Background>
+                        <RadialGradientBrush
+                            Center="0.5,0.1"
+                            GradientOrigin="0.5,0.05"
+                            RadiusX="0.45"
+                            RadiusY="0.6">
+
+                            <GradientStop Color="#333223" Offset="0.1"/>
+                            <GradientStop Color="#181c18" Offset="1.0"/>
+
+                        </RadialGradientBrush>
+                    </Border.Background>
+
+                    <StackPanel>
+                        <TextBlock Text="ESTIMATED PROFIT"
+                                   FontSize="12"
+                                   Foreground="#8C978A"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,5,0,5"/>
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center"
+                                    Margin="0,0,0,10">
+
+                            <TextBlock Text="+ 179,256"
+                                       FontFamily="Marcellus"
+                                       FontSize="26"
+                                       Foreground="#E0B957"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <Rectangle Height="0.8"
+                                   Fill="#404333"
+                                   Margin="16,0,16,0"/>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="1"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0"
+                                        HorizontalAlignment="Center">
+
+                                <TextBlock Text="Profit margin" Style="{StaticResource SmallTitleLabel}"
+                                           Margin="0,5,0,0"
+                                           HorizontalAlignment="Center"/>
+
+                                <TextBlock Text="56.4%" Style="{StaticResource SmallNumbers}"
+                                           Margin="0,0,0,5"
+                                           HorizontalAlignment="Center"/>
+                            </StackPanel>
+
+                            <Rectangle Grid.Column="1"
+                                       Fill="#404333"
+                                       Height="25"
+                                       VerticalAlignment="Center"/>
+
+                            <StackPanel Grid.Column="2"
+                                        HorizontalAlignment="Center">
+
+                                <TextBlock Text="Return on cost" Style="{StaticResource SmallTitleLabel}"
+                                           Margin="0,5,0,0"
+                                           HorizontalAlignment="Center"/>
+
+                                <TextBlock Text="142.2%" Style="{StaticResource SmallNumbers}"
+                                           Margin="0,0,0,5"
+                                           HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+
+                <!-- 3. COST BREAKDOWN -->
+                <TextBlock Text="COST BREAKDOWN"
+                           FontSize="12"
+                           Foreground="#A6B29F"
+                           Margin="2,0,0,5"/>
+
+                <!-- Raw resources -->
+                <Grid Margin="2,0,2,2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="Raw resources" Style="{StaticResource SmallLabel}"/>
                     </StackPanel>
 
-                    <Button DockPanel.Dock="Right"
-                            Content="Export"
-                            Width="65"
-                            Style="{StaticResource PrimaryButton}"
-                            VerticalAlignment="Center"/>
-                </DockPanel>
+                    <TextBlock Grid.Column="1"
+                               Text="− 15,000" Style="{StaticResource CostBreakdownNumbers}"/>
+                </Grid>
 
-                <DataGrid Grid.Row="1" Style="{StaticResource DataGridBase}"
-                          x:Name="ResourcesTable">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Tier" Binding="{Binding Tier}" IsReadOnly="True" Width="30"/>
-                        <DataGridTextColumn Header="Resource" Binding="{Binding Resource}" IsReadOnly="True" Width="45"/>
-                        <DataGridTextColumn Header="Raw Price" Binding="{Binding RawPrice}" IsReadOnly="False" Width="70"/>
-                        <DataGridTextColumn Header="Product" Binding="{Binding Product}" IsReadOnly="True" Width="45"/>
-                        <DataGridTextColumn Header="Sell Price" Binding="{Binding SellPrice}" IsReadOnly="False" Width="70"/>
-                        <DataGridTextColumn Header="Profit" Binding="{Binding Profit}" IsReadOnly="True" Width="120"/>
-                        <DataGridTextColumn Header="ROI" Binding="{Binding Roi}" IsReadOnly="True" Width="120"/>
-                        <DataGridTextColumn Header="Resource Cost" Binding="{Binding ResourceCost}" IsReadOnly="True" Width="120"/>
-                        <DataGridTextColumn Header="Usage Fee" Binding="{Binding UsageFee}" IsReadOnly="True" Width="120"/>
-                        <DataGridTextColumn Header="Market Tax" Binding="{Binding MarketTax}" IsReadOnly="True" Width="120"/>
-                    </DataGrid.Columns>
-                </DataGrid></Grid>
+                <!-- Station fee -->
+                <Grid Margin="2,0,2,2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Station fee" Style="{StaticResource SmallLabel}"/>
+
+                    <TextBlock Grid.Column="1"
+                               Text="− 15,000" Style="{StaticResource CostBreakdownNumbers}"/>
+                </Grid>
+
+                <!-- Market tax -->
+                <Grid Margin="2,0,2,2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Market tax" Style="{StaticResource SmallLabel}"/>
+
+                    <TextBlock Grid.Column="1"
+                               Text="− 15,000" Style="{StaticResource CostBreakdownNumbers}"/>
+                </Grid>
+
+                <Rectangle Height="1"
+                           Fill="#343B33"
+                           Margin="2,0,2,10"/>
+
+                <!-- Gross revenue -->
+                <Grid Margin="2,0,2,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Gross revenue"
+                               FontSize="13"
+                               Foreground="#CAD4C9"/>
+
+                    <TextBlock Grid.Column="1"
+                               Text="+ 318,000"
+                               FontSize="14"
+                               Foreground="#79BD8A"/>
+                </Grid>
+
+
+                <!-- 4. RETURNED RESOURCES -->
+                <Border Background="#222A22"
+                        BorderThickness="0"
+                        Padding="0"
+                        Margin="0,0,0,20">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Rectangle Grid.Column="0"
+                                   Fill="#79A56C"/>
+
+                        <Grid Grid.Column="1"
+                              Margin="10,0,10,5">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="26"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0"
+                                       Text="⇄"
+                                       FontSize="22"
+                                       Foreground="#91B58A"
+                                       VerticalAlignment="Center"/>
+
+                            <StackPanel Grid.Column="1"
+                                        Margin="5,0,0,0">
+
+                                <TextBlock Text="37 resources returned"
+                                           FontSize="13"
+                                           FontWeight="SemiBold"
+                                           Foreground="#C7D9C2"/>
+
+                                <TextBlock Text="Worth approximately 46,976 silver"
+                                           FontSize="11"
+                                           Foreground="#81947D"
+                                           Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </Border>
+
+
+                <!-- 5. SAVE BUTTON -->
+                <Button Content="Save this setup"
+                        Height="34"
+                        Background="#8e743a"
+                        Foreground="#f3e7c7"
+                        BorderBrush="#b69a57"
+                        BorderThickness="1"
+                        FontSize="14"
+                        FontWeight="SemiBold"
+                        FontFamily="{StaticResource DmSans}"
+                        Cursor="Hand"/>
+
+            </StackPanel>
         </Border>
-    </Grid>
+            </Grid>
+
+            <!-- Resource composition -->
+            <Border Grid.Row="4" Style="{StaticResource Card}" Padding="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="48" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <DockPanel Margin="14,0">
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock Text="RESOURCE COMPOSITION" Style="{StaticResource SectionTitle}" />
+                            <TextBlock Text="Materials required for this calculation"
+                                       Style="{StaticResource SmallLabel}"
+                                       Margin="0,2,0,0" />
+                        </StackPanel>
+
+                        <Button DockPanel.Dock="Right"
+                                Content="Export"
+                                Width="65"
+                                Style="{StaticResource PrimaryButton}"
+                                VerticalAlignment="Center" />
+                    </DockPanel>
+
+                    <DataGrid Grid.Row="1" Style="{StaticResource DataGridBase}"
+                              x:Name="ResourcesTable">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Tier" Binding="{Binding Tier}" IsReadOnly="True" Width="30" />
+                            <DataGridTextColumn Header="Resource" Binding="{Binding Resource}" IsReadOnly="True"
+                                                Width="45" />
+                            <DataGridTextColumn Header="Raw Price" Binding="{Binding RawPrice}" IsReadOnly="False"
+                                                Width="70" />
+                            <DataGridTextColumn Header="Product" Binding="{Binding Product}" IsReadOnly="True"
+                                                Width="45" />
+                            <DataGridTextColumn Header="Sell Price" Binding="{Binding SellPrice}" IsReadOnly="False"
+                                                Width="70" />
+                            <DataGridTextColumn Header="Profit" Binding="{Binding Profit}" IsReadOnly="True"
+                                                Width="120" />
+                            <DataGridTextColumn Header="ROI" Binding="{Binding Roi}" IsReadOnly="True" Width="120" />
+                            <DataGridTextColumn Header="Resource Cost" Binding="{Binding ResourceCost}"
+                                                IsReadOnly="True" Width="120" />
+                            <DataGridTextColumn Header="Usage Fee" Binding="{Binding UsageFee}" IsReadOnly="True"
+                                                Width="120" />
+                            <DataGridTextColumn Header="Market Tax" Binding="{Binding MarketTax}" IsReadOnly="True"
+                                                Width="120" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
 </UserControl>

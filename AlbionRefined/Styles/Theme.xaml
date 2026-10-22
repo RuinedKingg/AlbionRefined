@@ -3,54 +3,83 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Luna">
 
-    <!-- Colors sampled/approximated from the provided Figma screenshot -->
-    <SolidColorBrush x:Key="WindowBrush" Color="#191B1A"/>
-    <SolidColorBrush x:Key="SidebarBrush" Color="#111512"/>
-    <SolidColorBrush x:Key="PanelBrush" Color="#0E130F"/>
-    <SolidColorBrush x:Key="PanelAltBrush" Color="#151A16"/>
-    <SolidColorBrush x:Key="BorderBrush" Color="#29332C"/>
-    <SolidColorBrush x:Key="BorderStrongBrush" Color="#344238"/>
+    <!-- Цвета хуйни -->
+    <SolidColorBrush x:Key="WindowBrush" Color="#171b18"/>
+    <SolidColorBrush x:Key="SidebarBrush" Color="#0d100e"/>
+    <SolidColorBrush x:Key="PanelBrush" Color="#1a1f1b"/>
+    <SolidColorBrush x:Key="BorderBrush" Color="#303631"/>
+    <SolidColorBrush x:Key="BorderStrongBrush" Color="#940838"/>
     <SolidColorBrush x:Key="TextBrush" Color="#D8DDD9"/>
     <SolidColorBrush x:Key="MutedTextBrush" Color="#7D857F"/>
-    <SolidColorBrush x:Key="DimTextBrush" Color="#555D57"/>
-    <SolidColorBrush x:Key="AccentBrush" Color="#A7B83D"/>
-    <SolidColorBrush x:Key="AccentDarkBrush" Color="#657226"/>
-    <SolidColorBrush x:Key="SuccessBrush" Color="#9DB637"/>
-    <SolidColorBrush x:Key="WarningBrush" Color="#B28A3A"/>
-    <SolidColorBrush x:Key="CheckBoxBackground" Color="#151B17"/>
+    <SolidColorBrush x:Key="DimTextBrush" Color="#7D857F"/>
+    <SolidColorBrush x:Key="AccentBrush" Color="#940838"/>
+    <SolidColorBrush x:Key="AccentDarkBrush" Color="#940838"/>
+    <SolidColorBrush x:Key="SuccessBrush" Color="#D99E34"/>
+    <SolidColorBrush x:Key="WarningBrush" Color="#D99E34"/>
+    <SolidColorBrush x:Key="CheckBoxBackground" Color="#131714"/>
     
+    <!-- Шрифты -->
     <FontFamily x:Key="Marcellus">/Fonts/#Marcellus</FontFamily>
-    <FontFamily x:Key="DmSans">/Fonts/#DM Sans 14pt Medium</FontFamily>
-
+    <FontFamily x:Key="DmSans">/Fonts/#DM Sans 14pt Light</FontFamily>
+    
+    
+    <!-- большой заголовок -->
     <Style x:Key="PageTitle" TargetType="TextBlock">
-        <Setter Property="FontFamily" Value="{StaticResource DmSans}"/>
-        <Setter Property="FontSize" Value="18"/>
-        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontFamily" Value="{StaticResource Marcellus}"/>
+        <Setter Property="FontSize" Value="30"/>
         <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
         <Setter Property="Margin" Value="0,0,0,4"/>
     </Style>
-
+    <!-- Мини подпись под заголовком -->
     <Style x:Key="PageSubtitle" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontFamily" Value="{StaticResource DmSans}"/>
         <Setter Property="Foreground" Value="{StaticResource MutedTextBrush}"/>
     </Style>
-
+    <!-- заголовок секции -->
     <Style x:Key="SectionTitle" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="10"/>
-        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontFamily" Value="{StaticResource Marcellus}"/>
         <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
     </Style>
-
+    <!-- Мини заголовки секций-->
     <Style x:Key="SmallLabel" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="9"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontFamily" Value="{StaticResource DmSans}"/>
         <Setter Property="Foreground" Value="{StaticResource MutedTextBrush}"/>
     </Style>
-
+    <!-- белые цифры под большими желтыми -->
+    <Style x:Key="SmallNumbers" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontFamily" Value="{StaticResource DmSans}"/>
+        <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+    </Style>
+    
+    <!-- Мини заголовки раздел 2 над цифрами-->
+    <Style x:Key="SmallTitleLabel" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="FontFamily" Value="{StaticResource DmSans}"/>
+        <Setter Property="Foreground" Value="{StaticResource MutedTextBrush}"/>
+    </Style>
+    
+    <!-- Cost Breakdown numbers-->
+    <Style x:Key="CostBreakdownNumbers" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontFamily" Value="{StaticResource DmSans}"/>
+        <Setter Property="Foreground" Value="{StaticResource MutedTextBrush}"/>
+    </Style>
+    
     <Style x:Key="CheckBoxStyle" TargetType="CheckBox">
         <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
         <Setter Property="Background" Value="{StaticResource CheckBoxBackground}"/>
         <Setter Property="Height" Value="20"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+    
+    <Style x:Key="ProfitMargin" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontFamily" Value="{StaticResource Marcellus}"/>
+        <Setter Property="Foreground" Value="{StaticResource SuccessBrush}"/>
     </Style>
 
     <Style x:Key="NavButton" TargetType="Button">
@@ -127,7 +156,7 @@
         <Setter Property="Background" Value="#121714" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="FontSize" Value="12" />
-        <Setter Property="Height" Value="48" />
+        <Setter Property="Height" Value="30" />
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
             <Setter.Value>
