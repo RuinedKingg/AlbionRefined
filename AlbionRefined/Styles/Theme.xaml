@@ -18,8 +18,12 @@
     <SolidColorBrush x:Key="SuccessBrush" Color="#9DB637"/>
     <SolidColorBrush x:Key="WarningBrush" Color="#B28A3A"/>
     <SolidColorBrush x:Key="CheckBoxBackground" Color="#151B17"/>
+    
+    <FontFamily x:Key="Marcellus">/Fonts/#Marcellus</FontFamily>
+    <FontFamily x:Key="DmSans">/Fonts/#DM Sans 14pt Medium</FontFamily>
 
     <Style x:Key="PageTitle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource DmSans}"/>
         <Setter Property="FontSize" Value="18"/>
         <Setter Property="FontWeight" Value="SemiBold"/>
         <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
