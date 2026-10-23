@@ -23,13 +23,8 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <StackPanel Grid.Row="0">
-                <TextBlock Text="Resource processing" Style="{StaticResource PageTitle}" />
-                <TextBlock Text="Estimate refining costs, returns and market profit."
-                           Style="{StaticResource PageSubtitle}" />
-            </StackPanel>
 
-            <Grid Grid.Row="2">
+            <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="14" />
@@ -121,10 +116,10 @@
                                             Padding="1">
 
                                         <UniformGrid Columns="2">
-                                            <RadioButton Content="Leather"
+                                            <RadioButton Content="Cloth"
                                                          Style="{StaticResource TierButton}" />
 
-                                            <RadioButton Content="Cloth"
+                                            <RadioButton Content="Leather"
                                                          Style="{StaticResource TierButton}"
                                                          IsChecked="True" />
                                         </UniformGrid>
@@ -225,15 +220,15 @@
 
                                 <StackPanel Grid.Column="2">
                                     <TextBlock Text="Return rate" Style="{StaticResource SmallLabel}" />
-                                    <TextBox Name="ReturnRate" Text="36.7%"
-                                             Style="{StaticResource ResourceTextBox}"/>
+                                    <TextBox Name="ReturnRate" Text="36.7"
+                                             Style="{StaticResource PercentTextBox}"/>
                                 </StackPanel>
                                 
                                 <StackPanel Grid.Column="4">
                                     <TextBlock Text="Daily Bonus" Style="{StaticResource SmallLabel}" />
                                     <TextBox Name="DailyBonus" 
                                              Text="30" 
-                                             Style="{StaticResource ResourceTextBox}"/>
+                                             Style="{StaticResource PercentTextBox}"/>
                                 </StackPanel>
                                 
                             </Grid>
@@ -253,17 +248,19 @@
                                 </StackPanel>
                                 <StackPanel Grid.Column="2">
                                     <TextBlock Text="Market tax" Style="{StaticResource SmallLabel}" />
-                                    <TextBox Text="4.0%" Name="MarketTax" Style="{StaticResource ResourceTextBox}" />
-                                </StackPanel>
+                                    <TextBox Text="4.0" Name="MarketTax" 
+                                             Style="{StaticResource PercentTextBox}"/>
+                                    </StackPanel>
+                                <DockPanel Grid.Column="4">
+                                    <Button DockPanel.Dock="Bottom"
+                                            Content="Calculate"
+                                            Style="{StaticResource PrimaryButton}"
+                                            Width="160"
+                                            Margin="0 20 0 0"
+                                            Click="On_Calculate" />
+                                </DockPanel>
                             </Grid>
-
-                            <DockPanel Grid.Row="6">
-                                <Button DockPanel.Dock="Bottom"
-                                        Content="Calculate"
-                                        Style="{StaticResource PrimaryButton}"
-                                        Width="105"
-                                        Click="On_Calculate" />
-                            </DockPanel>
+                            
                         </Grid>
                     </Grid>
                 </Border>

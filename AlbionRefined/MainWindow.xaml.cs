@@ -10,6 +10,7 @@ public partial class MainWindow : Window
     private readonly CalculatorView _calculator = new();
     private readonly HistoryView _history = new();
     private readonly SavedSettingsView _savedSettings = new();
+    private readonly FishingView _fishing = new();
     private readonly MarketPricesView _marketPrices = new();
 
     public MainWindow()
@@ -26,6 +27,9 @@ public partial class MainWindow : Window
 
     private void SavedSettings_Click(object sender, RoutedEventArgs e) =>
         ShowView(_savedSettings, SavedSettingsButton);
+    
+    private void FishingProfit_Click(object sender, RoutedEventArgs e) =>
+        ShowView(_fishing, FishingButton);
 
     private void MarketPrices_Click(object sender, RoutedEventArgs e) =>
         ShowView(_marketPrices, MarketPricesButton);
@@ -39,6 +43,7 @@ public partial class MainWindow : Window
                      CalculatorButton,
                      HistoryButton,
                      SavedSettingsButton,
+                     FishingButton,
                      MarketPricesButton
                  })
         {

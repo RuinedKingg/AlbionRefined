@@ -62,7 +62,7 @@
         <Setter Property="Foreground" Value="{StaticResource MutedTextBrush}"/>
     </Style>
     
-    <!-- Cost Breakdown numbers-->
+    <!-- Cost Breakdown цифры-->
     <Style x:Key="CostBreakdownNumbers" TargetType="TextBlock">
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="FontFamily" Value="{StaticResource DmSans}"/>
@@ -81,7 +81,7 @@
         <Setter Property="FontFamily" Value="{StaticResource Marcellus}"/>
         <Setter Property="Foreground" Value="{StaticResource SuccessBrush}"/>
     </Style>
-
+<!-- Текст кнопок бокового меню-->
     <Style x:Key="NavButton" TargetType="Button">
         <Setter Property="Height" Value="32"/>
         <Setter Property="HorizontalContentAlignment" Value="Left"/>
@@ -90,7 +90,8 @@
         <Setter Property="Foreground" Value="{StaticResource MutedTextBrush}"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontFamily" Value="{StaticResource Marcellus}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -117,15 +118,9 @@
         </Setter>
     </Style>
 
-    <!-- <Style x:Key="TextBoxTrigger" TargetType="TextBox">
-        <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="BorderBrush" Value="#D99E34"/>
-            </Trigger>
-        </Style.Triggers>
-    </Style>-->
     
-    <Style x:Key="ResourceTextBox"
+    <!--Стиль активного окна для ввода значений-->
+   <Style x:Key="ResourceTextBox"
            TargetType="{x:Type TextBox}">
         <Setter Property="Background" Value="#252B24"/>
         <Setter Property="Foreground" Value="#E8E1D1"/>
@@ -133,7 +128,7 @@
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Padding" Value="5 0 0 0"/>
         <Setter Property="CaretBrush" Value="#D1AD5B"/>
-        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontSize" Value="15"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Height" Value="36"/>
         <Setter Property="Template">
@@ -143,7 +138,7 @@
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="2">
+                            CornerRadius="6">
 
                         <ScrollViewer x:Name="PART_ContentHost"
                                       Margin="{TemplateBinding Padding}"
@@ -183,6 +178,86 @@
         </Style.Triggers>
     </Style>
     
+    
+    <!-- Добавленное ограничение рамки и значок-->
+    <Style x:Key="PercentTextBox"
+       TargetType="{x:Type TextBox}"
+       BasedOn="{StaticResource ResourceTextBox}">
+
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="{x:Type TextBox}">
+
+                <Border x:Name="InputBorder"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="6">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="1"/>
+                            <ColumnDefinition Width="32"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Область ввода -->
+                        <ScrollViewer
+                            x:Name="PART_ContentHost"
+                            Grid.Column="0"
+                            Margin="{TemplateBinding Padding}"
+                            VerticalAlignment="Center"/>
+
+                        <!-- Вертикальная линия -->
+                        <Border Grid.Column="1"
+                                Background="#625A3F"
+                                Margin="0,6"/>
+
+                        <!-- Знак процента -->
+                        <TextBlock Grid.Column="2"
+                                   Text="%"
+                                   Foreground="#D1AD5B"
+                                   FontSize="14"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"/>
+                    </Grid>
+                </Border>
+
+                <!-- Подсветка при наведении и вводе -->
+                <ControlTemplate.Triggers>
+
+                    <Trigger Property="IsMouseOver"
+                             Value="True">
+                        <Setter TargetName="InputBorder"
+                                Property="BorderBrush"
+                                Value="#B79A53"/>
+                    </Trigger>
+
+                    <Trigger Property="IsKeyboardFocused"
+                             Value="True">
+                        <Setter TargetName="InputBorder"
+                                Property="BorderBrush"
+                                Value="#D1AD5B"/>
+                        <Setter TargetName="InputBorder"
+                                Property="Background"
+                                Value="#302F22"/>
+                    </Trigger>
+
+                    <Trigger Property="IsEnabled"
+                             Value="False">
+                        <Setter TargetName="InputBorder"
+                                Property="Opacity"
+                                Value="0.5"/>
+                    </Trigger>
+
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+
+</Style>
+    
+    <!--Кнопка Посчитать в калькуляторе-->
     <Style x:Key="PrimaryButton" TargetType="Button">
         <Setter Property="Height" Value="28"/>
         <Setter Property="Padding" Value="12,0"/>
@@ -190,7 +265,8 @@
         <Setter Property="Background" Value="#2A321F"/>
         <Setter Property="BorderBrush" Value="#58652B"/>
         <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="FontSize" Value="9"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontFamily" Value="{StaticResource Marcellus}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -198,7 +274,7 @@
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="2">
+                            CornerRadius="6">
                         <ContentPresenter
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
