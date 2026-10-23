@@ -100,8 +100,6 @@
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="10" />
                                 <RowDefinition Height="Auto" />
-                                <RowDefinition />
-                                <RowDefinition />
                             </Grid.RowDefinitions>
 
                             <Grid Grid.Row="0">
@@ -114,10 +112,11 @@
                                 </Grid.ColumnDefinitions>
 
                                 <StackPanel>
-                                    <TextBlock Text="Resource" Style="{StaticResource SmallLabel}" />
+                                    <TextBlock Text="Resource" Style="{StaticResource SmallLabel}" 
+                                               Margin="0,0,0,5"/>
                                     <Border BorderBrush="#303832"
                                             BorderThickness="1"
-                                            CornerRadius="4"
+                                            CornerRadius="2"
                                             Background="#121714"
                                             Padding="1">
 
@@ -125,7 +124,7 @@
                                             <RadioButton Content="Leather"
                                                          Style="{StaticResource TierButton}" />
 
-                                            <RadioButton Content="Ткань"
+                                            <RadioButton Content="Cloth"
                                                          Style="{StaticResource TierButton}"
                                                          IsChecked="True" />
                                         </UniformGrid>
@@ -133,10 +132,11 @@
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="2">
-                                    <TextBlock Text="Tier" Style="{StaticResource SmallLabel}" />
+                                    <TextBlock Text="Tier" Style="{StaticResource SmallLabel}" 
+                                               Margin="0,0,0,5"/>
                                     <Border BorderBrush="#303832"
                                             BorderThickness="1"
-                                            CornerRadius="4"
+                                            CornerRadius="2"
                                             Background="#121714"
                                             Padding="1">
 
@@ -174,10 +174,11 @@
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="4">
-                                    <TextBlock Text="Enchantment" Style="{StaticResource SmallLabel}" />
+                                    <TextBlock Text="Enchantment" Style="{StaticResource SmallLabel}" 
+                                               Margin="0,0,0,5"/>
                                     <Border BorderBrush="#303832"
                                             BorderThickness="1"
-                                            CornerRadius="4"
+                                            CornerRadius="2"
                                             Background="#121714"
                                             Padding="1">
 
@@ -201,7 +202,11 @@
                                     </Border>
                                 </StackPanel>
                             </Grid>
-
+                            
+                            <Rectangle Grid.Row="0" Height="1"
+                                       Fill="#343B33"
+                                       Margin="0,70,0,0"/>
+                            
                             <Grid Grid.Row="2">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
@@ -210,16 +215,27 @@
                                     <ColumnDefinition Width="10" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-
+                                
                                 <StackPanel>
-                                    <TextBlock Text="Quantity" Style="{StaticResource SmallLabel}" />
-                                    <TextBox Name="StackSize" Text="100" />
+                                    <TextBlock Text="Amount" Style="{StaticResource SmallLabel}" />
+                                    <TextBox Name="StackSize" 
+                                             Style="{StaticResource ResourceTextBox}"
+                                             Text="100"/>
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="2">
                                     <TextBlock Text="Return rate" Style="{StaticResource SmallLabel}" />
-                                    <TextBox Name="ReturnRate" Text="36.7%" LostFocus="PercentTextBox_LostFocus" />
+                                    <TextBox Name="ReturnRate" Text="36.7%"
+                                             Style="{StaticResource ResourceTextBox}"/>
                                 </StackPanel>
+                                
+                                <StackPanel Grid.Column="4">
+                                    <TextBlock Text="Daily Bonus" Style="{StaticResource SmallLabel}" />
+                                    <TextBox Name="DailyBonus" 
+                                             Text="30" 
+                                             Style="{StaticResource ResourceTextBox}"/>
+                                </StackPanel>
+                                
                             </Grid>
 
                             <Grid Grid.Row="4">
@@ -233,44 +249,20 @@
 
                                 <StackPanel>
                                     <TextBlock Text="Usage fee" Style="{StaticResource SmallLabel}" />
-                                    <TextBox Name="UsageFee" Text="350" />
+                                    <TextBox Name="UsageFee" Text="350" Style="{StaticResource ResourceTextBox}"/>
                                 </StackPanel>
                                 <StackPanel Grid.Column="2">
                                     <TextBlock Text="Market tax" Style="{StaticResource SmallLabel}" />
-                                    <TextBox Text="4.0%" Name="MarketTax" LostFocus="PercentTextBox_LostFocus" />
+                                    <TextBox Text="4.0%" Name="MarketTax" Style="{StaticResource ResourceTextBox}" />
                                 </StackPanel>
                             </Grid>
 
-                            <Grid Grid.Row="6">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="10" />
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="10" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-
-                                <StackPanel>
-                                    <TextBlock Text="Focus available" Style="{StaticResource SmallLabel}" />
-                                    <TextBox Text="30,000" />
-                                </StackPanel>
-                                <StackPanel Grid.Column="2">
-                                    <TextBlock Text="Focus per craft" Style="{StaticResource SmallLabel}" />
-                                    <TextBox Text="30" />
-                                </StackPanel>
-                            </Grid>
-
-                            <DockPanel Grid.Row="8">
+                            <DockPanel Grid.Row="6">
                                 <Button DockPanel.Dock="Bottom"
                                         Content="Calculate"
                                         Style="{StaticResource PrimaryButton}"
                                         Width="105"
                                         Click="On_Calculate" />
-
-                                <CheckBox DockPanel.Dock="Bottom"
-                                          Name="UseFocusCheckBox"
-                                          Content="Focus use"
-                                          Style="{StaticResource CheckBoxStyle}" />
                             </DockPanel>
                         </Grid>
                     </Grid>
