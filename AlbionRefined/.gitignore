@@ -1,0 +1,76 @@
+# ==============================
+# JetBrains Rider
+# ==============================
+
+.idea/
+.idea/**
+
+# Rider user-specific files
+*.sln.iml
+*.DotSettings.user
+
+# Rider caches and local workspace data
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries/
+.idea/**/shelf/
+.idea/.idea.AlbionRefined/.idea/.name
+
+# ==============================
+# .NET / C# build artifacts
+# ==============================
+
+# Build output (including nested projects and target frameworks)
+**/bin/
+**/obj/
+
+# .NET generated files and caches
+*.AssemblyInfoInputs.cache
+*.csproj.AssemblyReference.cache
+*.csproj.CoreCompileInputs.cache
+*.cache
+
+# NuGet local artifacts
+.nuget/
+packages.lock.json.user
+
+# Visual Studio / MSBuild temporary files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.binlog
+
+# ==============================
+# WPF generated files
+# ==============================
+
+# Generated XAML code and designer artifacts
+**/*.g.cs
+**/*.g.i.cs
+**/*.baml
+**/*.resources
+**/*.tmp_proj
+
+# WPF build caches
+**/GeneratedInternalTypeHelper.g.cs
+
+# ==============================
+# Windows / editor temporary files
+# ==============================
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# ==============================
+# Local application settings / secrets
+# ==============================
+
+# Local development settings (if used)
+appsettings.Local.json
+appsettings.Development.Local.json
