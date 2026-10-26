@@ -12,4 +12,8 @@ public class ResourcesDto
     public decimal ResourceCost { get; set; }
     public decimal UsageFee { get; set; }
     public decimal MarketTax { get; set; }
+    
+    public int ResourcePerTier { get; set; } 
+    public int ProductAmount { get; set; }
+    public int ResourceAmount { get; set; }
 }
