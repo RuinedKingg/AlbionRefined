@@ -116,8 +116,9 @@
                                             Padding="1">
 
                                         <UniformGrid Columns="2">
-                                            <RadioButton Content="Cloth"
-                                                         Style="{StaticResource TierButton}" />
+                                            <RadioButton Style="{StaticResource TierButton}">
+                                                <Image Source="{StaticResource T2Cloth}" Stretch="Uniform"/>
+                                            </RadioButton>
 
                                             <RadioButton Content="Leather"
                                                          Style="{StaticResource TierButton}"

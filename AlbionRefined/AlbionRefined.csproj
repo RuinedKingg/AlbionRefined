@@ -18,6 +18,138 @@
       <Resource Include="Fonts\Marcellus-Regular.ttf">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Resource>
+      <None Remove="Icons\calcicon.png" />
+      <Resource Include="Icons\calcicon.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\insticon.png" />
+      <Resource Include="Icons\insticon.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\resouricon.png" />
+      <Resource Include="Icons\resouricon.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\setticon.png" />
+      <Resource Include="Icons\setticon.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\stoncsicon.png" />
+      <Resource Include="Icons\stoncsicon.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T2_CLOTH.png" />
+      <Resource Include="Icons\T2_CLOTH.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T2_FIBER.png" />
+      <Resource Include="Icons\T2_FIBER.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T2_HIDE.png" />
+      <Resource Include="Icons\T2_HIDE.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T2_LEATHER.png" />
+      <Resource Include="Icons\T2_LEATHER.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T3_CLOTH.png" />
+      <Resource Include="Icons\T3_CLOTH.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T3_FIBER.png" />
+      <Resource Include="Icons\T3_FIBER.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T3_HIDE.png" />
+      <Resource Include="Icons\T3_HIDE.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T3_LEATHER.png" />
+      <Resource Include="Icons\T3_LEATHER.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_CLOTH.png" />
+      <Resource Include="Icons\T4_CLOTH.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_CLOTH_LEVEL1.png" />
+      <Resource Include="Icons\T4_CLOTH_LEVEL1.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_CLOTH_LEVEL2.png" />
+      <Resource Include="Icons\T4_CLOTH_LEVEL2.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_CLOTH_LEVEL3.png" />
+      <Resource Include="Icons\T4_CLOTH_LEVEL3.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_CLOTH_LEVEL4.png" />
+      <Resource Include="Icons\T4_CLOTH_LEVEL4.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_FIBER.png" />
+      <Resource Include="Icons\T4_FIBER.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_FIBER_LEVEL1.png" />
+      <Resource Include="Icons\T4_FIBER_LEVEL1.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_FIBER_LEVEL2.png" />
+      <Resource Include="Icons\T4_FIBER_LEVEL2.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_FIBER_LEVEL3.png" />
+      <Resource Include="Icons\T4_FIBER_LEVEL3.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_FIBER_LEVEL4.png" />
+      <Resource Include="Icons\T4_FIBER_LEVEL4.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_HIDE.png" />
+      <Resource Include="Icons\T4_HIDE.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_HIDE_LEVEL1.png" />
+      <Resource Include="Icons\T4_HIDE_LEVEL1.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_HIDE_LEVEL2.png" />
+      <Resource Include="Icons\T4_HIDE_LEVEL2.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_HIDE_LEVEL3.png" />
+      <Resource Include="Icons\T4_HIDE_LEVEL3.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_HIDE_LEVEL4.png" />
+      <Resource Include="Icons\T4_HIDE_LEVEL4.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_LEATHER.png" />
+      <Resource Include="Icons\T4_LEATHER.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_LEATHER_LEVEL1.png" />
+      <Resource Include="Icons\T4_LEATHER_LEVEL1.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_LEATHER_LEVEL2.png" />
+      <Resource Include="Icons\T4_LEATHER_LEVEL2.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_LEATHER_LEVEL3.png" />
+      <Resource Include="Icons\T4_LEATHER_LEVEL3.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Icons\T4_LEATHER_LEVEL4.png" />
+      <Resource Include="Icons\T4_LEATHER_LEVEL4.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
     </ItemGroup>
 
     <ItemGroup>

@@ -22,6 +22,8 @@
     <FontFamily x:Key="Marcellus">/Fonts/#Marcellus</FontFamily>
     <FontFamily x:Key="DmSans">/Fonts/#DM Sans 14pt Light</FontFamily>
     
+    <!-- Иконки -->
+    <BitmapImage x:Key="T2Cloth" UriSource="/Icons/T2_CLOTH.png"/>
     
     <!-- большой заголовок -->
     <Style x:Key="PageTitle" TargetType="TextBlock">
